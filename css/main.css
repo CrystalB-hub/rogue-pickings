@@ -52,11 +52,14 @@ header {
     justify-content: center;
     align-items: center;
 	flex-flow: row wrap;
+	text-align: center;
+	width: 100%;
 }
 
 header h1 {
 	margin: 0;
 	border-bottom: 3px solid #77a466;
+	width: 100%;
 }
 header h1 span {
 	color: #77a466;
@@ -87,6 +90,7 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
+	border-bottom: 1px solid #eee;
 	margin: 0 auto;
 	display: flex;
     justify-content: center;
@@ -161,3 +165,57 @@ footer span {
 	color: #77a466;
 	font-size: .875em;
 }
+
+/*Media Queries*/
+
+@media (min-width: 768px) {
+	.section-one,
+    .section-two,
+    .section-three {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  flex-flow: row wrap;
+	  width: 33%;
+	  height: auto;
+	}	
+	
+	.section-two {
+	  border-left: 1px solid #eee;
+	  border-right: 1px solid #eee;
+	}
+
+    .bottom-section h3, p, li, ul {
+       width: 100%;
+	   text-align: left; 
+	   height: auto;
+	}
+	
+	footer {
+      margin: 10px;
+	  border: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	header nav ul li {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: nowrap;
+		align-items: center;
+		width: 50%;
+		height: auto;
+	}
+
+	header h1 {
+		border: none;
+		text-align: left;
+	}
+
+	header nav ul li {
+		display: inline;
+		padding: 0 10px;
+	}
+	
+}
+
