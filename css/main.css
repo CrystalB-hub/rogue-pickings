@@ -168,7 +168,7 @@ footer span {
 
 /*Media Queries*/
 
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
 	.section-one,
     .section-two,
     .section-three {
@@ -176,13 +176,16 @@ footer span {
 	  justify-content: center;
 	  align-items: center;
 	  flex-flow: row wrap;
-	  width: 33%;
+	  flex-basis: auto;
+	  width: 28%;
 	  height: auto;
+	  padding: 15px;
 	}	
 	
 	.section-two {
 	  border-left: 1px solid #eee;
 	  border-right: 1px solid #eee;
+	  
 	}
 
     .bottom-section h3, p, li, ul {
@@ -197,24 +200,25 @@ footer span {
 	}
 }
 
-@media (min-width: 1200px) {
-	header nav ul li {
+@media all and (min-width: 1200px) {
+	header h1 nav ul li {
 		display: flex;
 		justify-content: space-between;
 		flex-flow: nowrap;
 		align-items: center;
-		width: 50%;
 		height: auto;
 	}
 
 	header h1 {
 		border: none;
 		text-align: left;
+		width: 50%;
 	}
 
 	header nav ul li {
 		display: inline;
 		padding: 0 10px;
+		width: 40%;
 	}
 	
 }
